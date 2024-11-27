@@ -134,7 +134,7 @@ class Cityscapes(CityscapesBase, DatasetBase):
         return self._load(self.images[idx])
 
     def load_label(self, idx):
-        label = self._load(self.labels[idx]) + 1
+        label = self._load(self.labels[idx])
         return label
 
     def __len__(self):
