@@ -147,10 +147,11 @@ class OWLoss(nn.Module):
             mav = mav.expand(logs.shape[0], -1)
             if self.previous_count[label] > 0:
                 ew_l1 = self.criterion(logs, mav)
-                ew_l1 = ew_l1 / (self.var[label] + 1e-8)
+                ew_l1 = ew_l1 / (self.var[label] + 0.3) # fixing feature loss instability
                 if self.hinged:
                     ew_l1 = F.relu(ew_l1 - self.delta).sum(dim=1)
-                acc_loss += ew_l1.mean()
+                #acc_loss += ew_l1.mean()
+                acc_loss += ew_l1.sum() / logits_permuted.numel() # this is more aligned with paper's formula
 
         return acc_loss
 
