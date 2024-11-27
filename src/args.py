@@ -22,6 +22,12 @@ class ArgumentParser(argparse.ArgumentParser):
             help="path to latest checkpoint",
         )
         self.add_argument(
+            "--dataset",
+            default="cityscapes",
+            choices=["cityscapes", "liaci"], 
+            help="Dataset to use. Options: cityscapes, liaci."
+        )
+        self.add_argument(
             "--load_weights",
             default="",
             type=str,
@@ -238,14 +244,6 @@ class ArgumentParser(argparse.ArgumentParser):
             "afterwards",
         )
 
-        # dataset
-        self.add_argument(
-            "--dataset",
-            default="cityscapes",
-            choices=[
-                "cityscapes",
-            ],
-        )
         self.add_argument(
             "--dataset_dir",
             default="/export/datasets/cityscapes",
