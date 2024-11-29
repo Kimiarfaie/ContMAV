@@ -1,6 +1,6 @@
 # Open-World Semantic Segmentation for Ship Hull Inspection
 
-This repository is adapted from the original Open-World Semantic Segmentation Including Class Similarity, which was presented at IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR) 2024. The code has been customized and extended for the application of semantic segmentation in underwater ship hull inspection. Specifically improvements have been made to the "Feature loss" to adress some issues it has.
+This repository is adapted from the original [Open-World Semantic Segmentation Including Class Similarity](https://github.com/PRBonn/ContMAV.git), which was presented at IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR) 2024. The code has been customized and extended for the application of semantic segmentation in underwater ship hull inspection. Specifically improvements have been made to the "Feature loss" to adress some issues it has.
 
 You can find the paper [here](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/sodano2024cvpr.pdf).
 
