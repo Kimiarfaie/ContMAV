@@ -17,14 +17,10 @@ You can choose your favourite hyperparameters configuration in `args.py`. For tr
 
 The expected data structure is taken from Cityscapes. BDDAnomaly has been converted to Cityscapes format.
 
-## Cite
+## Testing
 
-Please cite us at
-```bibtex
-@inproceedings{sodano2024cvpr,
-    author = {Matteo Sodano and Federico Magistri and Lucas Nunes and Jens Behley and Cyrill Stachniss},
-    title = {{Open-World Semantic Segmentation Including Class Similarity}},
-    booktitle = {{Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR)}},
-    year = {2024}
-}
+Use the following command to test the trained model on your dataset.
+
+`python test.py --dataset 'liaci' --dataset_dir 'path-tp-dataset' --checkpoint_path 'path-to-checkpoint' --code_mode 'test_ow' --test_notes 'test_liaci_owthresh3' --batch_size 16 --num_classes <N>`.
+
 
