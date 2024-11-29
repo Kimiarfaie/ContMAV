@@ -315,3 +315,20 @@ class ArgumentParser(argparse.ArgumentParser):
             action="store_true",
             help="Only one batch in training and validation.",
         )
+
+        # for inference/testing
+        self.add_argument(
+            '--code_mode',
+            default='training',
+            help='change it to: [test_ow, test_close]'
+        )
+        self.add_argument(
+            '--checkpoint_path',
+            default='/home/ContMAV/results/cityscapes/epoch_499.pth',
+            help='provide a path to checkpoint of the trained model'
+        )
+        self.add_argument(
+            '--test_notes',
+            default='empty',
+            help='give notes to the folder name of test folder in tensorboard'
+        )
